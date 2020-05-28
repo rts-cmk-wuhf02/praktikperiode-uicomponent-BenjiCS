@@ -9,7 +9,15 @@ const client = contentful.createClient({
 const entryKey = "5CO64XRJojX4RdeacaSTrj"
 
 client.getEntry(`${entryKey}`)
-.then((entry) => console.log(entry))
+.then((entry) => {
+  client.getAsset('6bVuUUK3pCUqkZBWlrw9S8') // asset id
+  .then((data) => 
+  document.querySelector(".App__background").setAttribute("src", data.fields.file.url)
+  );
+  document.querySelector(".App__subtitle").innerHTML = entry.fields.subtitle;
+  document.querySelector(".App__title").innerHTML = entry.fields.title;
+  document.querySelector(".App__desc").innerHTML = entry.fields.description;
+})
 .catch(console.error)
 
 
