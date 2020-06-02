@@ -4,7 +4,7 @@ import './index.css';
 
 // Components
 import Maladives from './assets/components/maldives/app';
-// import Outdoor from './assets/components/outdoor/app';
+import Outdoor from './assets/components/outdoor/app';
 // import Parcelbox from './assets/components/parcelbox/app';
 // import Offthegrid from './assets/components/offthegrid/app'; // eslint-disable-line no-unused-vars
 // import Mustsee from './assets/components/mustsee/app'; // eslint-disable-line no-unused-vars
@@ -21,9 +21,9 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Maladives/>
-    {/* <Outdoor/>
-   <Parcelbox/> */}
+    <Maladives maldives_subTitle="TRAVEL"/>
+    <Outdoor/>
+   {/* <Parcelbox/> */}
     { /* <Offthegrid/>
     <Mustsee/>
     <Latestnews/>

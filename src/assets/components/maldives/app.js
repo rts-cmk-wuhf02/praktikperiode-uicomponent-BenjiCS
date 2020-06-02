@@ -1,10 +1,11 @@
-import React from "react"; // eslint-disable-line no-unused-vars
-import "./maldives.js";
+import React, {Component} from "react"; // eslint-disable-line no-unused-vars
+// import "./maldives.js";
 
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 
-function app() {
+class maldives extends Component {
+  render() {
   return (
     <div
       className="Maldives__app"
@@ -12,7 +13,7 @@ function app() {
         margin: 0;
         padding: 0;
         width: 372px;
-        height: 471px;
+        height: 550px;
         border-radius: 10px;
         background-color: white;
         grid-column-start: 1;
@@ -43,7 +44,7 @@ function app() {
           margin-left: 30px;
         `}
       >
-        Loading
+        {this.props.maldives_subTitle}
       </p>
       <h1
         className="app__title"
@@ -72,7 +73,7 @@ function app() {
         Loading
       </p>
     </div>
-  );
+  )};
 }
 
-export default app;
+export default maldives;
