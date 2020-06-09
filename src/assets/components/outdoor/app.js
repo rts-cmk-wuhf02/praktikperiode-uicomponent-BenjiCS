@@ -1,4 +1,4 @@
-import React, {Component} from "react"; // eslint-disable-line no-unused-vars
+import React, { Component } from "react"; // eslint-disable-line no-unused-vars
 import "./outdoor.js";
 
 /** @jsx jsx */
@@ -14,7 +14,7 @@ function app() {
         grid-template-columns: 2fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 2fr 2fr 1fr;
         height: 500px;
-        width: 1050px;
+        width: 1000px;
         background-color: white;
         padding: 25px;
         border-radius: 10px;
@@ -45,11 +45,12 @@ function app() {
           background: #005aee;
           color: white;
           width: 100px;
-          padding: 10px;
+          padding: 18px;
           text-align: center;
           border-radius: 30px;
           grid-column: 4;
           grid-row: 1;
+          margin-left: 60px;
         `}
       >
         LEISURE
@@ -78,12 +79,52 @@ function app() {
           border-radius: 30px;
           grid-column: 2 / 5;
           grid-row: 3;
+          margin-right: 150px;
         `}
       >
         It’s windy. The cool breeze of the ocean. It gives, a sense of beauty,
         in motion. All is flowing, rushing and tide-And I sit in wonder,
         dreaming beside.
       </p>
+      <img
+        src=""
+        className="app__smallImg1"
+        alt="loading"
+        css={css`
+          grid-column: 2 / 5;
+          grid-row: 4;
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 140px;
+          margin-left: 15px;
+        `}
+      ></img>
+      <img
+        src=""
+        className="app__smallImg2"
+        alt="loading"
+        css={css`
+          grid-column: 3 / 5;
+          grid-row: 4;
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 140px;
+          margin-left: 15px;
+        `}
+      ></img>
+      <img
+        src=""
+        className="app__smallImg3"
+        alt="loading"
+        css={css`
+          grid-column: 4 / 5;
+          grid-row: 4;
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 140px;
+          margin-left: 15px;
+        `}
+      ></img>
     </div>
   );
 }

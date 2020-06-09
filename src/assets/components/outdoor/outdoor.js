@@ -10,14 +10,18 @@ const entryKey = "2xSCPaboBDoqrzFODT2qMJ";
 
 client
   .getEntry(`${entryKey}`)
-  .then((entry) => {
-    client.getAsset("4g40vR3npBvlzQ6RactdtM") // asset id
-      .then((data) => {
-        document.querySelector(".app__bigImage")
-        .setAttribute("src", entry.fields.bigImage.fields.file.url);
+    .then((entry) => {
+      client.getAsset('4g40vR3npBvlzQ6RactdtM')
+      .then((asset) => document.querySelector(".app__bigImage").setAttribute("src", asset.fields.file.url))
+      .catch(console.error)
+      client.getAsset('2OzDAxdPBRPYxjItRRoJBU')
+      .then((asset) => document.querySelector(".app__smallImg1").setAttribute("src", asset.fields.file.url))
+      .catch(console.error)
+      client.getAsset('3f2GdAk27wIF3ROJFiA34R')
+      .then((asset) => document.querySelector(".app__smallImg2").setAttribute("src", asset.fields.file.url))
+      .catch(console.error)
+      client.getAsset('T35mu2sj8jM3EpiL1S8jU')
+      .then((asset) => document.querySelector(".app__smallImg3").setAttribute("src", asset.fields.file.url))
         console.log(entry);
-        
-        console.log(data);
-      });
-  })
+      })
   .catch(console.error);
